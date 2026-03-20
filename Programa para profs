@@ -1,0 +1,62 @@
+#include <iostream>
+using namespace std;
+#include <cmath>
+#include <string>
+
+int main()
+{
+	cout<<"Programa para calcular as médias nas provas dos alunos 2CPM (parciais)"<<endl;
+	cout<<"----------------------------------------------------------------------"<<endl;
+	int alunosa=0;
+	int alunosr=0;
+	
+	
+	teste:
+    int n1;
+    cout<<"Digite o valor da nota 1: ";
+    cin>>n1;
+    if(n1>35){
+    	cout<<"nota absurda"<<endl;
+    	goto teste;
+	}
+	
+	int n2;
+    cout<<"Digite o valor da nota 2: ";
+    cin>>n2;
+     if(n2>35){
+    	cout<<"nota absurda"<<endl;
+    	goto teste;
+    }
+    char opc='s';
+	
+	
+	 int res=n1+n2;
+     
+    if(res>=42){
+	cout<<"aluno aprovado, nota: "<<res<<endl;
+	alunosa=alunosa+1;
+	
+	}else{
+		cout<<"aluno de recuperacao, nota: "<<res<<endl;
+		alunosr=alunosr+1;
+	}
+	
+	int continuar;
+    cout<<"Continuar??? sim=1 nao=0"<<endl;
+    cin>>continuar;
+	if(continuar==1){
+	goto teste;
+	}else{
+		cout<<"alunos aprovados: "<<alunosa<<endl;
+		cout<<"alunos de recuperacao: "<<alunosr<<endl;
+		cout<<"Obrigado por usar este programa (:";
+	}
+	
+	
+    
+    
+    
+    
+    
+    return 0;
+}
