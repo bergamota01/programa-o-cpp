@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-	cout<<"Programa para calcular as médias nas provas dos alunos 2CPM (parciais)"<<endl;
+	cout<<"Programa para verificar as notas dos alunos 2CPM (parciais)"<<endl;
 	cout<<"----------------------------------------------------------------------"<<endl;
 	int alunosa=0;
 	int alunosr=0;
