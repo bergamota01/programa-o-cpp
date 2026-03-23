@@ -1,0 +1,63 @@
+#include <iostream>
+
+using namespace std;
+int main(){
+	int pedido;
+	double valor;
+	double quant;
+	double total=0;
+    int sn;
+    cout<<"Autoatendimento da lanchonete da Janete"<<endl;
+    
+    cout<<"Escolha seu pedido"<<endl;
+    
+    cout<<"Hamburguer:(R$ 15,50), Cachorro-quente (R$ 10,00), Salada (R$ 12,00)"<<endl;
+	cout<<"     1                         2                         3             "<<endl;
+
+	cout<<"Digite o numero: ";
+	cin>>pedido;
+	
+	pedir:
+	switch(pedido){
+		case 1:
+			cout<<"Quantidade de Hamburgueres: ";
+			cin>>quant;
+			valor=quant*15.50;
+			cout<<"Valor R$: "<<valor<<endl;
+			total=total+valor;
+			break;
+		case 2:
+			cout<<"Quantidade de cachorros-q: ";
+			cin>>quant;
+			valor=quant*10;
+			cout<<"Valor R$: "<<valor<<endl;
+			total=total+valor;
+			break;
+		case 3:
+	    	cout<<"Quantidade de salada: ";
+			cin>>quant;
+			valor=quant*12;
+			cout<<"Valor R$: "<<valor<<endl;
+			total=total+valor;
+			break;
+		default:
+		    cout<<"Numero invalido"<<endl	;
+		    break;
+	}
+	cout<<"Quer pedir mais coisas? sim=1 nao=0"<<endl;
+	cin>>sn;
+	if(sn==1){
+		goto pedir;
+	}else{
+		cout<<"Obrigado"<<endl;
+		cout<<"Total R$: "<<total;
+	}
+	
+	
+	
+	
+	
+	
+	
+	return 0;
+}
